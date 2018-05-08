@@ -110,9 +110,9 @@ def play
   end
   
   if won?         #if over, check for a winner
-    if @winner = "X"
+    if @winner == "X"
       puts "Congratulations X!"
-    elsif @winner = "O"
+    elsif @winner == "O"
       puts "Congratulations O!"
     end
   elsif draw?
