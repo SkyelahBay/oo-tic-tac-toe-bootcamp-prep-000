@@ -45,7 +45,7 @@ def move(index, player="X")
 end
 
 def won?
-  @winning_array = 
+  
   
 end
 
