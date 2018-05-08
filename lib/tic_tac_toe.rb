@@ -45,9 +45,22 @@ def move(index, player="X")
 end
 
 def won?
+  WIN_COMBINATIONS.each do |combination| #for each combination
+    win_index_1 = combination[0]
+    win_index_2 = combination[1] 
+    win_index_3 = combination[2] 
+    pos_1 = @board[win_index_1]
+    pos_2 = @board[win_index_2]
+    pos_3 = @board[win_index_3]
+    
+    #if all of the "win" spaces of board are X or O
+    if (pos_1 == "X" && pos_2 == "X" && pos_3 == "X") || (pos_1 == "O" && pos_2 == "O" && pos_3 == "O")
+      return combination #return the entire array that won
+    end #end if
+  end #end iteration of WIN_COMBINATIONS
   
-  
-end
+  return false #if no combination was returned that means there was no winner so return false.
+end #end won?
 
 def winner
   combination = won? #if there is a winner it will return the combination
