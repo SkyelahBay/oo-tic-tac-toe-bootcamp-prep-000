@@ -58,7 +58,11 @@ def full?
 end
 
 def draw?
-  
+  if !won? && full? #if no winner & board is full
+    return true
+  elsif won? #else if a winner
+    return false
+  end
 end
 
 def turn
