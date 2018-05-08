@@ -47,7 +47,7 @@ end
 def won?
   WIN_COMBINATIONS.each do |combination| #for each combination
     holder = []
-    @combination = combination
+    @combination = combination #set the current array to the instance_var
     holder.push(@board[@combination[0]])
     holder.push(@board[@combination[1]])
     holder.push(@board[@combination[2]])
