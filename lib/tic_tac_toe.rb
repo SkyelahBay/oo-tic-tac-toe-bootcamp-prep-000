@@ -19,7 +19,8 @@ WIN_COMBINATIONS = [
 
 
 def input_to_index(input)
-  return input.to_i - 1
+  @input = input.to_i - 1
+  return @input
 end
 
 def position_taken?(index) #if pos is not nil or empty, it IS taken.
@@ -28,6 +29,7 @@ end
 def valid_move?(index)
   !index.between?(0,8) || position_taken?(index) ? false : true
 end
+
 
 def turn_count
   @board.count{|space| space == "X" || space == "O"}
