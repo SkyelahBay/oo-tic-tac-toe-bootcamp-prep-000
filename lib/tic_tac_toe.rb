@@ -47,8 +47,7 @@ end
 def turn
   phrase = "Please enter 1-9:"
   puts phrase
-  input = gets.strip
-  @index = input_to_index(input)
+  @index = input_to_index(gets.strip)
   
   
 end
