@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
 
 
 def input_to_index(input)
-  return input.to_i - 1
+  @index = input.to_i - 1
 end
 
 def position_taken?(index) #if pos is not nil or empty, it IS taken.
