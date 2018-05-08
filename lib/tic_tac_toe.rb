@@ -27,6 +27,7 @@ def position_taken?(index) #if pos is not nil or empty, it IS taken.
 end
 def valid_move?(index)
   position_taken?(index) ? false : true
+  
 end
 
 def turn_count
