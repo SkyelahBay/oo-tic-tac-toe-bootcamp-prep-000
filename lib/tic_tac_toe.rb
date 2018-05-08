@@ -36,8 +36,8 @@ def current_player
   turn_count.even? ? @player = "X" : @player = "O"
 end
 
-def move(index, player)
-  @board[@index] = @player
+def move(index, player="X")
+  @board[@index] = player
   display_board
 end
 
