@@ -44,6 +44,24 @@ def move(index, player="X")
   display_board
 end
 
+def won
+  
+  
+end
+
+def winner
+  
+end
+
+def full?
+  
+  
+end
+
+def draw?
+  
+end
+
 def turn
   phrase = "Please enter 1-9:"
   puts phrase
@@ -54,8 +72,17 @@ def turn
     turn
   end
 end
+
 def play
+  until over?
+    turn
+  end
   
+  if won?
+    return "Congatulations #{@winner}!"
+  elsif draw?
+    return "Cat's Game!"
+  end
 end
   
   
