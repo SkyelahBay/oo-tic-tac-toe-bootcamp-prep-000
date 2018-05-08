@@ -65,6 +65,10 @@ def draw?
   end
 end
 
+def over
+  
+end
+
 def turn
   phrase = "Please enter 1-9:"
   puts phrase
