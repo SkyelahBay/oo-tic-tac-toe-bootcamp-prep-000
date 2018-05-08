@@ -54,8 +54,7 @@ def winner
 end
 
 def full?
-  
-  
+  @board.any?{|space| space == " " || space == nil} ? false : true 
 end
 
 def draw?
