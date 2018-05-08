@@ -4,7 +4,8 @@ def initialize(board=nil)
 end
 
 def display_board
-  puts "#{@board[0]}"
+  puts "#{@board[0]} | #{@board[0]} | #{@board[0]}"
+  puts "-----------"
 
 def WIN_COMBINATIONS
   
