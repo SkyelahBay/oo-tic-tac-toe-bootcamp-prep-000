@@ -44,8 +44,8 @@ def move(index, player="X")
   display_board
 end
 
-def won
-  
+def won?
+  @winning_array = 
   
 end
 
