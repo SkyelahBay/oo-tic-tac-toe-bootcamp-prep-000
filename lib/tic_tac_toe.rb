@@ -57,7 +57,7 @@ def won?
     holder.clear #reset our holder.
   end #end iteration of WIN_COMBINATIONS
 
-  @win_combination = false
+  @win_combination = false #if there's a winner, will never reach this line.
   return @win_combination 
   #if no combination was returned that means no winner so return false.
 end #end won?
