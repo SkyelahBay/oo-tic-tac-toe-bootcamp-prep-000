@@ -64,11 +64,11 @@ end #end won?
 
 def winner
   if !over? #if there is no draw or no winner the game is not over yet
-    return nil
+    nil
   elsif @board[@win_combination[0]] == "X" 
-    return "X"
+    "X"
   elsif @board[@win_combination[0]] == "O" 
-    return "O"
+    "O"
   end
 end
 
