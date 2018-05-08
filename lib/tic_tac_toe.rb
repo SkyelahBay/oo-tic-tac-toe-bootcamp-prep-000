@@ -45,8 +45,8 @@ def move(index, player="X")
 end
 
 def won?
+  holder = [] #nil, then 0,4,8
   WIN_COMBINATIONS.each do |combination| #for each combination
-    holder = [] #nil, then 0,4,8
     @combination = combination #set the current array to the instance_var
     holder.push(@board[@combination[0]]) #0
     holder.push(@board[@combination[1]]) #4
