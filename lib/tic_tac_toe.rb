@@ -82,7 +82,8 @@ def draw?
     return false
   elsif full? #else if there's no winner, but the board is full
     return true
-  end
+  else
+    return false #if there's no winner and the board is not full, game is going.
 end
 
 def over?
