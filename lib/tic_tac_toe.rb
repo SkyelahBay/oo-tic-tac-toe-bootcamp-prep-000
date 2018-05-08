@@ -70,7 +70,6 @@ def winner
   elsif @board[@win_combination[0]] == "O" 
     return @winner = "O"
   end
-  return @winner
 end
 
 def full?
