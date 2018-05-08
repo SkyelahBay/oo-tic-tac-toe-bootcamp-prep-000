@@ -51,7 +51,7 @@ def won?
     holder.push(@board[@win_combination[0]]) #0
     holder.push(@board[@win_combination[1]]) #4
     holder.push(@board[@win_combination[2]]) #8
-    if holder.all?{|index| index =="X" || index == "O"} #if All contain X/O
+    if holder.all?{|index| index =="X"} || holder.all?{|index| index =="O"}
       return @win_combination #this ends won? entirely.
     end
     holder.clear #reset our holder.
