@@ -52,12 +52,13 @@ def won?
     holder.push(@board[@combination[1]]) #4
     holder.push(@board[@combination[2]]) #8
     if holder.all?{|index| index =="X" || index == "O"} #if All contain X/O
-      return @combination
+      return @combination #this ends won? entirely.
     end
     holder.length = 0 #reset our holder.
   end #end iteration of WIN_COMBINATIONS
 
-  return false #if no combination was returned that means there was no winner so return false.
+  @combination = false
+  return @combination #if no combination was returned that means there was no winner so return false.
 end #end won?
 
 def winner
