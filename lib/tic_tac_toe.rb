@@ -54,7 +54,7 @@ def won?
     if holder.all?{|index| index =="X" || index == "O"} #if All contain X/O
       return @combination #this ends won? entirely.
     end
-    holder.length = 0 #reset our holder.
+    holder.clear #reset our holder.
   end #end iteration of WIN_COMBINATIONS
 
   @combination = false
