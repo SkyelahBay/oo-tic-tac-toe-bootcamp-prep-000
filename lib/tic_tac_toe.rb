@@ -22,8 +22,11 @@ def input_to_index(input)
   @index = input.to_i - 1
 end
 
-def position_taken?(index) #if pos is not nil or empty, it IS taken.
-  !(@board[index] == nil || @board[index] == " ") ? true : false
+def position_taken? #if pos is not nil or empty, it IS taken.
+  !(@board[@index] == nil || @board[@index] == " ") ? true : false
+end
+def valid_move?
+  !@index.between?(0..8) || position_taken? ? false : true
 end
 
 def move(index, player)
