@@ -22,6 +22,9 @@ def input_to_index(input)
   @index = input.to_i - 1
 end
 
+def position_taken(index)
+  !@board[index] == nil || !@board[index] == " " ? true : false
+end
 def move(index, player)
   @board[@index] = @player
   display_board
