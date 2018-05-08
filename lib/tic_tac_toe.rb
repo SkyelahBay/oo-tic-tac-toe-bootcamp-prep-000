@@ -52,7 +52,7 @@ def won?
     holder.push(@board[@win_combination[1]]) #4
     holder.push(@board[@win_combination[2]]) #8
     if holder.all?{|index| index =="X"} || holder.all?{|index| index =="O"}
-      return @win_combination #this ends won? entirely.
+      return @win_combination #this ends #won? entirely.
     end
     holder.clear #reset our holder.
   end #end iteration of WIN_COMBINATIONS
