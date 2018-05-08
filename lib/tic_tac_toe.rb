@@ -65,8 +65,12 @@ def draw?
   end
 end
 
-def over
-  
+def over?
+  if draw? || won? || full? #if there is a draw, win, or full board
+    return true
+  else
+    return false
+  end
 end
 
 def turn
