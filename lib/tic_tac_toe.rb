@@ -19,8 +19,8 @@ WIN_COMBINATIONS = [
 
 
 def input_to_index(input)
-  @input = input.to_i - 1
-  return @input
+  @index = input.to_i - 1
+  return @index
 end
 
 def position_taken?(index) #if pos is not nil or empty, it IS taken.
@@ -38,11 +38,20 @@ def current_player
   turn_count.even? ? @player = "X" : @player = "O"
 end
 
+
 def move(index, player="X")
   @board[index] = player
   display_board
 end
 
+def turn
+  phrase = "Please enter 1-9:"
+  puts phrase
+  input = gets.strip
+  @index = input_to_index(input)
+  
+  
+end
 def play
   
 end
