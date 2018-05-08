@@ -46,11 +46,11 @@ end
 
 def won?
   WIN_COMBINATIONS.each do |combination| #for each combination
-    holder = []
+    holder = [] #0,4,8
     @combination = combination #set the current array to the instance_var
-    holder.push(@board[@combination[0]])
-    holder.push(@board[@combination[1]])
-    holder.push(@board[@combination[2]])
+    holder.push(@board[@combination[0]]) #0
+    holder.push(@board[@combination[1]]) #4
+    holder.push(@board[@combination[2]]) #8
     if holder.all?{|index| index =="X" || index == "O"}
       return @combination
     end
