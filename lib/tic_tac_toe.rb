@@ -46,19 +46,18 @@ end
 
 def won?
   WIN_COMBINATIONS.each do |combination| #for each combination
-    @combination = combination
     holder = []
-    holder.push @board[@combination[0]]
-    pos_2 = @board[@combination[1]]
-    pos_3 = @board[@combination[2]]
-    
-    #if all of the "win" spaces of board are X or O
-    if (pos_1 == "X" && pos_2 == "X" && pos_3 == "X") || (pos_1 == "O" && pos_2 == "O" && pos_3 == "O")
-      return combination #return the entire array that won
-    end #end if
+    @combination = combination
+    holder.push(@board[@combination[0]])
+    holder.push(@board[@combination[1]])
+    holder.push(@board[@combination[2]])
+    if holder.all?{|index| index =="X" || index == "O"}
+      return @combination
+    end
   end #end iteration of WIN_COMBINATIONS
   
-  return false #if no combination was returned that means there was no winner so return false.
+  @combination = false
+  return @combination #if no combination was returned that means there was no winner so return false.
 end #end won?
 
 def winner
