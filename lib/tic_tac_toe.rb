@@ -25,8 +25,8 @@ end
 def position_taken? #if pos is not nil or empty, it IS taken.
   !(@board[@index] == nil || @board[@index] == " ") ? true : false
 end
-def valid_move?
-  !@index.between?(0..8) || position_taken? ? false : true
+def valid_move?(index)
+  !index.between?(0..8) || position_taken? ? false : true
 end
 
 def turn_count
