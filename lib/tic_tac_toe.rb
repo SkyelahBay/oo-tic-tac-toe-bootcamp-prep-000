@@ -58,10 +58,10 @@ def full?
 end
 
 def draw?
-  if !won? && full? #if no winner & board is full
-    return true
-  elsif won? #else if a winner
+  if won? #if there's a winner, no draw.
     return false
+  elsif full? #else if there's no winner, but the board is full
+    return true
   end
 end
 
