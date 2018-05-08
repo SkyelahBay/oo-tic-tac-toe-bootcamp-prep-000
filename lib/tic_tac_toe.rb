@@ -58,7 +58,8 @@ def won?
   end #end iteration of WIN_COMBINATIONS
 
   @combination = false
-  return @combination #if no combination was returned that means there was no winner so return false.
+  return @combination 
+  #if no combination was returned that means no winner so return false.
 end #end won?
 
 def winner
