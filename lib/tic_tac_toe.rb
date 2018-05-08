@@ -109,7 +109,7 @@ def play
   end
   
   if won?         #if over, check for a winner
-    return "Congratulations #{@winner}!"
+    return "Congratulations #{winner}!"
   elsif draw?
     puts "Cat's Game!"
   end
