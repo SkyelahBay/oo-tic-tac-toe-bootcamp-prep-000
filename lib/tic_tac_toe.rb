@@ -33,7 +33,7 @@ def turn_count
   @board.count{|space| space == "X" || space == "O"}
 end
 def current_player
-  turn_count.even? ? "X" : "O"
+  turn_count.even? ? @player = "X" : @player = "O"
 end
 
 def move(index, player)
