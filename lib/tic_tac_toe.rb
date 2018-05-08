@@ -22,6 +22,11 @@ def input_to_index(input)
   @index = input.to_i - 1
 end
 
+def move(index, player)
+  @board[@index] = @player
+  display_board
+end
+
 def play
   
 end
