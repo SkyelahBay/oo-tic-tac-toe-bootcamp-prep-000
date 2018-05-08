@@ -61,12 +61,11 @@ def won?
 end #end won?
 
 def winner
-  combination = won? #if there is a winner it will return the combination
   if !over? #if there is no draw or no winner the game is not over yet
     @winner = nil
-  elsif @board[combination[0]] == "X" 
+  elsif @board[@combination[0]] == "X" 
     @winner = "X"
-  elsif @board[combination[0]] == "O" 
+  elsif @board[@combination[0]] == "O" 
     @winner = "O"
   end
   return @winner
