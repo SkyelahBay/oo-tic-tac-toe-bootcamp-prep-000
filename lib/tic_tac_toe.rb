@@ -37,7 +37,7 @@ def current_player
 end
 
 def move(index, player="X")
-  @board[@index] = player
+  @board[index] = player
   display_board
 end
 
