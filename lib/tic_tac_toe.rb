@@ -47,18 +47,18 @@ end
 def won?
   holder = [] #nil, then 0,4,8
   WIN_COMBINATIONS.each do |combination| #for each combination
-    @combination = combination #set the current array to the instance_var
-    holder.push(@board[@combination[0]]) #0
-    holder.push(@board[@combination[1]]) #4
-    holder.push(@board[@combination[2]]) #8
+    @win_combination = combination #set the current array to the instance_var
+    holder.push(@board[@win_combination[0]]) #0
+    holder.push(@board[@win_combination[1]]) #4
+    holder.push(@board[@win_combination[2]]) #8
     if holder.all?{|index| index =="X" || index == "O"} #if All contain X/O
-      return @combination #this ends won? entirely.
+      return @win_combination #this ends won? entirely.
     end
     holder.clear #reset our holder.
   end #end iteration of WIN_COMBINATIONS
 
-  @combination = false
-  return @combination 
+  @win_combination = false
+  return @win_combination 
   #if no combination was returned that means no winner so return false.
 end #end won?
 
