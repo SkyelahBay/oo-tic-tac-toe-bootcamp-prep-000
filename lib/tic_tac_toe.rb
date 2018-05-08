@@ -11,13 +11,12 @@ def display_board
   puts "#{@board[6]} | #{@board[7]} | #{@board[9]}"
 end
 
-def WIN_COMBINATIONS
-  @WIN_COMBINATIONS = [
-    [0,1,2],[3,4,5],[6,7,8],  #horizontal
-    [0,3,6],[1,4,7],[2,5,8],  #vertical
-    [0,4,8],[2,4,6]           #diagonal
-  ]
-end
+@WIN_COMBINATIONS = [
+  [0,1,2],[3,4,5],[6,7,8],  #horizontal
+  [0,3,6],[1,4,7],[2,5,8],  #vertical
+  [0,4,8],[2,4,6]           #diagonal
+]
+
 
 def input_to_index
   
