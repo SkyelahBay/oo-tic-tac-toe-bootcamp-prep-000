@@ -29,6 +29,13 @@ def valid_move?
   !@index.between?(0..8) || position_taken? ? false : true
 end
 
+def turn_count
+  @board.count{|space| space == "X" || space == "O"}
+end
+def current_player
+  
+end
+
 def move(index, player)
   @board[@index] = @player
   display_board
