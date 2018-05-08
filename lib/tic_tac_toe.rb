@@ -5,6 +5,11 @@ end
 
 def WIN_COMBINATIONS
   
+end
+
+def play
+  
+end
   
   
   
