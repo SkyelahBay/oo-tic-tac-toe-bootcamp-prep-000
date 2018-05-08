@@ -98,7 +98,7 @@ def play
   end
   
   if won?
-    return "Congatulations #{@winner}!"
+    puts "Congatulations #{@winner}!"
   elsif draw?
     puts "Cat's Game!"
   end
