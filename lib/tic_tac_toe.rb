@@ -111,7 +111,7 @@ def play
   end
   
   if won?         #if over, check for a winner
-    puts "Congratulations #@winner!"
+    puts "Congratulations #{winner}!"
   elsif draw?
     puts "Cat's Game!"
   end
