@@ -67,8 +67,10 @@ def winner
     return nil
   elsif @board[@win_combination[0]] == "X" 
     @winner = "X"
+    return @winner
   elsif @board[@win_combination[0]] == "O" 
     @winner = "O"
+    return @winner
   end
   
 end
